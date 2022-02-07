@@ -1,0 +1,20 @@
+<div class="d-flex flex-row p-2 height-100">
+  <div class="p-2 border height-100 left-nav">
+    <ul class="nav flex-column">
+      <li
+        class="nav-item"
+        draggable="true"
+        (dragstart)="dragstart_handler($event)"
+      >
+        <a class="nav-link" aria-current="page" href="#">Node</a>
+      </li>
+    </ul>
+  </div>
+  <div
+    class="p-2 flex-fill border height-100"
+    (drop)="drop_handler($event)"
+    (dragover)="dragover_handler($event)"
+  >
+    <div id="cy" class="height-100percent"></div>
+  </div>
+</div>
